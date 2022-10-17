@@ -3,7 +3,7 @@ pipeline {
 
   environment {
        imagename = "biolar/tomboy"
-       registryCredential = 'Dockerhub'
+       registryCredential = 'DockerHub'
        dockerImage = ''
            }
 
@@ -55,7 +55,7 @@ pipeline {
     stage ('Deploy To Tomcat Server') {
       steps{
         script {
-         deploy adapters: [tomcat9(credentialsId: 'deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://44.201.78.28:8080')], contextPath: 'webapp', war: '**/*.war''
+         deploy adapters: [tomcat9(credentialsId: '[tomcat9(credentialsId: 'tomcat', path: '', url: 'http://44.201.78.28:8080')], contextPath: 'webapp', war: '**/*.war''
            }
        }
    }
